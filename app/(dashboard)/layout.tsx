@@ -1,11 +1,25 @@
 import React from 'react'
 
-const layout = () => {
+function Layout({children}: {children: React.ReactNode}) {
   return (
-    <div>
-      
+    <div className='
+        flex
+        flex-col
+        min-h-screen
+        min-w-full
+        b-background
+        max-h-screen
+    '>
+        <nav></nav>
+        <main className="
+            flex
+            w-full
+            flex-grow
+        ">
+            {children}
+        </main>
     </div>
   )
 }
 
-export default layout
+export default Layout
