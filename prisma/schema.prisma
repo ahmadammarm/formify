@@ -22,12 +22,14 @@ model Form {
   visits Int @default(0)
   submissions Int @default(0)
   shareURL String @default(uuid())
+  FormSubmissions FormSubmissions[]
 }
 
-model FormSubmission {
+model FormSubmissions {
   id        Int      @id @default(autoincrement())
-  formId    Int
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  fields    field[]
+  formId Int
+  form Form @relation(fields: [formId], references: [id])
+
+  content String
 }
