@@ -1,3 +1,4 @@
+import { UserButton } from '@clerk/nextjs'
 import React from 'react'
 
 function Layout({children}: {children: React.ReactNode}) {
@@ -10,7 +11,12 @@ function Layout({children}: {children: React.ReactNode}) {
         b-background
         max-h-screen
     '>
-        <nav></nav>
+        <nav>
+          <Logo />
+          <ThemeSwitcher />
+          <UserButton afterSignOutUrl="/sign-in/" />
+
+        </nav>
         <main className="
             flex
             w-full
