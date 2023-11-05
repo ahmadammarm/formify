@@ -13,7 +13,8 @@ function ThemeSwitcher() {
     setMounted(true);
   }, []);
 
-  if (!mounted) return null;
+  if (!mounted) 
+  return null;
 
   return (
     <Tabs defaultValue={theme}>
