@@ -5,7 +5,7 @@ function Logo() {
   return (
     <Link href={'/'} className='
         font-bold
-        text-4xl
+        text-3xl
         bg-gradient-to-r
         from-teal-700
         to-cyan-600
