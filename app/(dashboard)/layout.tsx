@@ -17,7 +17,7 @@ function Layout({children}: {children: React.ReactNode}) {
           flex
           justify-between
           border-b
-          border-gray-200
+          border-gray-500
           h-[60px]
           px-4
           py-2
