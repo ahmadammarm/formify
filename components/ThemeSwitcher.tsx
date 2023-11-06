@@ -13,7 +13,7 @@ function ThemeSwitcher() {
     setMounted(true);
   }, []);
 
-  if (!mounted) return null; // avoid rehydration errors
+  if (!mounted) return null;
   return (
     <Tabs defaultValue={theme}>
       <TabsList className="border">
