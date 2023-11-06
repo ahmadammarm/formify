@@ -14,7 +14,7 @@ function FormLinkShare({ shareUrl }: { shareUrl: string }) {
   }, []);
 
   if (!mounted) {
-    return null; // avoiding window not defined error
+    return null;
   }
 
   const shareLink = `${window.location.origin}/submit/${shareUrl}`;
@@ -27,12 +27,12 @@ function FormLinkShare({ shareUrl }: { shareUrl: string }) {
           navigator.clipboard.writeText(shareLink);
           toast({
             title: "Copied!",
-            description: "Link copied to clipboard",
+            description: "Link Copied to the Clipboard",
           });
         }}
       >
         <ImShare className="mr-2 h-4 w-4" />
-        Share link
+        Share Link
       </Button>
     </div>
   );
