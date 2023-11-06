@@ -23,7 +23,7 @@ export default function Home() {
         <CardStatsWrapper />
       </Suspense>
       <Separator className="my-6" />
-      <h2 className="text-4xl font-bold col-span-2">Your forms</h2>
+      <h2 className="text-4xl font-bold col-span-2">Form Anda</h2>
       <Separator className="my-6" />
       <div className="grid gric-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <CreateFormBtn />
@@ -57,34 +57,34 @@ function StatsCards(props: StatsCardProps) {
       <StatsCard
         title="Total Pengunjung"
         icon={<LuView className="text-blue-600" />}
-        helperText="All time form visits"
+        helperText="Total Pengunjung Keseluruhan"
         value={data?.visits.toLocaleString() || ""}
         loading={loading}
         className="shadow-md shadow-blue-600"
       />
 
       <StatsCard
-        title="Total submissions"
+        title="Total Pengumpulan"
         icon={<FaWpforms className="text-yellow-600" />}
-        helperText="All time form submissions"
+        helperText="Total Pengumpulan Keseluruhan"
         value={data?.submissions.toLocaleString() || ""}
         loading={loading}
         className="shadow-md shadow-yellow-600"
       />
 
       <StatsCard
-        title="Submission rate"
+        title="Persentase Pengumpulan"
         icon={<HiCursorClick className="text-green-600" />}
-        helperText="Visits that result in form submission"
+        helperText="Total Pengunjung yang Mengumpulkan"
         value={data?.submissionRate.toLocaleString() + "%" || ""}
         loading={loading}
         className="shadow-md shadow-green-600"
       />
 
       <StatsCard
-        title="Bounce rate"
+        title="Persentase Pengunjung"
         icon={<TbArrowBounce className="text-red-600" />}
-        helperText="Visits that leaves without interacting"
+        helperText="Total Pengunjung yang Tidak Mengumpulkan"
         value={data?.submissionRate.toLocaleString() + "%" || ""}
         loading={loading}
         className="shadow-md shadow-red-600"
@@ -174,14 +174,14 @@ function FormCard({ form }: { form: Form }) {
         {form.published && (
           <Button asChild className="w-full mt-2 text-md gap-4">
             <Link href={`/forms/${form.id}`}>
-              View submissions <BiRightArrowAlt />
+              Lihat Pengumpulan <BiRightArrowAlt />
             </Link>
           </Button>
         )}
         {!form.published && (
           <Button asChild variant={"secondary"} className="w-full mt-2 text-md gap-4">
             <Link href={`/builder/${form.id}`}>
-              Edit form <FaEdit />
+              Edit Form <FaEdit />
             </Link>
           </Button>
         )}
