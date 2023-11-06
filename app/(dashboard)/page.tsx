@@ -23,7 +23,7 @@ export default function Home() {
         <CardStatsWrapper />
       </Suspense>
       <Separator className="my-6" />
-      <h2 className="text-4xl font-bold col-span-2">Form Anda</h2>
+      <h2 className="text-4xl font-bold col-span-2">Your forms</h2>
       <Separator className="my-6" />
       <div className="grid gric-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <CreateFormBtn />
@@ -55,36 +55,36 @@ function StatsCards(props: StatsCardProps) {
   return (
     <div className="w-full pt-8 gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
       <StatsCard
-        title="Total Pengunjung"
+        title="Total Visits"
         icon={<LuView className="text-blue-600" />}
-        helperText="Total Pengunjung Keseluruhan"
+        helperText="All Time Form Visits"
         value={data?.visits.toLocaleString() || ""}
         loading={loading}
         className="shadow-md shadow-blue-600"
       />
 
       <StatsCard
-        title="Total Pengumpulan"
+        title="Total Submissions"
         icon={<FaWpforms className="text-yellow-600" />}
-        helperText="Total Pengumpulan Keseluruhan"
+        helperText="All Time Form Submissions"
         value={data?.submissions.toLocaleString() || ""}
         loading={loading}
         className="shadow-md shadow-yellow-600"
       />
 
       <StatsCard
-        title="Persentase Pengumpulan"
+        title="Submission Rate"
         icon={<HiCursorClick className="text-green-600" />}
-        helperText="Total Pengunjung yang Mengumpulkan"
+        helperText="Visits That Result in Form Submission"
         value={data?.submissionRate.toLocaleString() + "%" || ""}
         loading={loading}
         className="shadow-md shadow-green-600"
       />
 
       <StatsCard
-        title="Persentase Pengunjung"
+        title="Bounce Rate"
         icon={<TbArrowBounce className="text-red-600" />}
-        helperText="Total Pengunjung yang Tidak Mengumpulkan"
+        helperText="Visits that Leaves without Interacting"
         value={data?.submissionRate.toLocaleString() + "%" || ""}
         loading={loading}
         className="shadow-md shadow-red-600"
@@ -174,7 +174,7 @@ function FormCard({ form }: { form: Form }) {
         {form.published && (
           <Button asChild className="w-full mt-2 text-md gap-4">
             <Link href={`/forms/${form.id}`}>
-              Lihat Pengumpulan <BiRightArrowAlt />
+              View Submissions <BiRightArrowAlt />
             </Link>
           </Button>
         )}
