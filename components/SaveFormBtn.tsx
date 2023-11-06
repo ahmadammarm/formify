@@ -16,12 +16,12 @@ function SaveFormBtn({ id }: { id: number }) {
       await UpdateFormContent(id, jsonElements);
       toast({
         title: "Success",
-        description: "Your form has been saved",
+        description: "Your Form Has Been Saved",
       });
     } catch (error) {
       toast({
         title: "Error",
-        description: "Something went wrong",
+        description: "Ups, Something Went Wrong",
         variant: "destructive",
       });
     }
