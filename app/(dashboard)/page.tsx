@@ -1,5 +1,8 @@
 import { GetFormStats } from '@/actions/form'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Skeleton } from '@/components/ui/skeleton'
 import React from 'react'
+import { LuView } from 'react-icons/lu'
 
 export default function Home() {
   return
@@ -21,7 +24,7 @@ interface StatsCardProps {
 function StatsCards(props: StatsCardProps){
   const{ data, loading } = props;
 
-  return <div className='
+  return (<div className='
     w-full
     pt-8
     gap-4
@@ -32,6 +35,52 @@ function StatsCards(props: StatsCardProps){
   '>
     <StatsCard
       title="Total Visits"
+      icon={<LuView className="
+        text-blue-500
+      "/>}
+      helperText="Total number of visits"
+      value={data.visits.toLocaleString()}
+      loading={loading}
+      className="shadow-md shadow-red-600"
     />
   </div>
+  );
+}
+
+function StatsCard(
+  {
+    title,
+    value,
+    icon,
+    helperText,
+    loading,
+    className
+  }: {
+    title: string;
+    value: string;
+    icon: React.ReactNode;
+    helperText: string;
+    loading: boolean;
+    className: string;
+  }
+){
+  return (
+  <Card className={className}>
+    <CardHeader>
+      <CardTitle>
+        {title}
+      </CardTitle>
+      {icon}
+    </CardHeader>
+    <CardContent>
+      <div className='text-2xl font-bold'>
+        {loading && (
+        <Skeleton>
+          <span>0</span>
+        </Skeleton>
+        )}
+      </div>
+    </CardContent>
+  </Card>
+  )
 }
