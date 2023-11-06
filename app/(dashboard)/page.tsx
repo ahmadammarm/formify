@@ -60,7 +60,10 @@ function StatsCards(props: StatsCardProps) {
         helperText="All Time Form Visits"
         value={data?.visits.toLocaleString() || ""}
         loading={loading}
-        className="shadow-md shadow-blue-600"
+        className="
+        shadow-md 
+        shadow-blue-600
+        "
       />
 
       <StatsCard
