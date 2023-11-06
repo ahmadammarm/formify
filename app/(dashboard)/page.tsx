@@ -1,3 +1,4 @@
+import { GetFormStats } from '@/actions/form'
 import React from 'react'
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     </div>
 }
 
-function CardStatsWrapper() {
-  
+async function CardStatsWrapper() {
+  const stats = await GetFormStats();
+  return <StatsCard loading={false} data={stats} />
 }
