@@ -1,22 +1,15 @@
-import Link from 'next/link'
-import React from 'react'
+import Link from "next/link";
+import React from "react";
 
 function Logo() {
   return (
-    <Link href={'/'} className='
-        font-bold
-        text-3xl
-        bg-gradient-to-r
-        from-teal-700
-        to-cyan-600
-        text-transparent
-        bg-clip-text
-        hover:from-teal-500 
-        hover:to-cyan-400
-    '>
-        Formify
+    <Link
+      href={"/"}
+      className="font-bold text-3xl bg-gradient-to-r from-indigo-400 to-cyan-400 text-transparent bg-clip-text hover:cursor-pointer"
+    >
+      PageForm
     </Link>
-  )
+  );
 }
 
-export default Logo
+export default Logo;
