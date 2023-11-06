@@ -55,7 +55,7 @@ function StatsCards(props: StatsCardProps) {
   return (
     <div className="w-full pt-8 gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
       <StatsCard
-        title="Total visits"
+        title="Total Pengunjung"
         icon={<LuView className="text-blue-600" />}
         helperText="All time form visits"
         value={data?.visits.toLocaleString() || ""}
