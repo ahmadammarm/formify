@@ -26,13 +26,13 @@ function PublishFormBtn({ id }: { id: number }) {
       await PublishForm(id);
       toast({
         title: "Success",
-        description: "Your form is now available to the public",
+        description: "Your Form is Now Available To the Public",
       });
       router.refresh();
     } catch (error) {
       toast({
         title: "Error",
-        description: "Something went wrong",
+        description: "Ups, Something Went Wrong",
       });
     }
   }
