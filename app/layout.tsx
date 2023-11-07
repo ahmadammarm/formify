@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Formify - Create Your Own Form",
-  description: "Check my youtube channel for more content",
+  description: "Formify - Create Your Own Form",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
