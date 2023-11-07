@@ -1,10 +1,8 @@
-import Link from "next/link";
 import React from "react";
 
 function Logo() {
   return (
-    <Link
-      href={"/"}
+    <h2
       className="
       font-bold 
       text-3xl 
@@ -16,10 +14,11 @@ function Logo() {
       hover:from-teal-400
       hover:to-cyan-300
       transition-all
+      cursor-default
       "
     >
       Formify
-    </Link>
+    </h2>
   );
 }
 
